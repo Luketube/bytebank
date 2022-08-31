@@ -18,14 +18,13 @@ export class NovaTransferenciaComponent implements OnInit {
   destino: number;
 
   transferir() {
-    console.log("Realizada nova transferencia")
-
     const valoresEmitidos = {valor: this.valor, destino: this.destino};
+
     this.aoTransferir.emit(valoresEmitidos);
 
     this.valor = 0;
     this.destino = 0;
-  
+ 
   }
 
 }
