@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'BytBank';
+
+  transferencias: any[] = [];
+
+  transferir($event: Object){
+
+    const transferencia = {...$event, data: new Date()};
+    
+    this.transferencias.push(transferencia);
+    
+  }
 }
+
